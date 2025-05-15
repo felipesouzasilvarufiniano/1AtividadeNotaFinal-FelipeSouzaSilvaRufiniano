@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<title>Calculadora para IMC</title>
+<meta charset="UTF-8">
+<script>
+   
+ function validarFormulario(event) {
+      event.preventDefault(); 
+
+      let nome = document.getElementById("name").value.trim();
+      let email = document.getElementById("email").value.trim();
+      let mensagem = document.getElementById("mensagem").value.trim();
+
+      let emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (nome === "" || email === "" || mensagem === "") {
+        alert("Por favor, preencha todos os campos.");
+      } else if (!emailValido.test(email)) {
+        alert("Por favor, insira um e-mail válido.");
+      } else {
+        alert("Formulário enviado com sucesso!");
+        document.getElementById("formulario").submit(); 
+  
+  
+  
+</script>
+ 
+<style>
+  h2 {
+    color: black;}
+  
+</style>
+</head>
+
+<body>
+  
+  
+  
+  <h2> Calcular IMC</h2>
+<form action="/submit_form" method="post">
+<label for="name"> Nome: </label> <br>
+
+<input type="text" id="name" name="name"> <br><br>
+
+<input type="submit" value="Enviar">
+
+</form>
+  
+  <form action="/submit_form" method="post">
+<label for="Email"> Email: </label> <br>
+
+<input type="text" id="Email" Email="Email"> <br><br>
+
+<input type=
+
+"submit" value="Enviar">
+
+</form>
+
+<label for="mensagem">Sua Mensagem:</label><br>
+<textarea id="mensagem" name="mensagem" rows="4" cols="50"></textarea>
+
+</body>
+
+
+</html>
+
